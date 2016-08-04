@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="merriweather-regular-webfont.ttf">
+            <string>Merriweather</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="R5E-M3-yRy" customClass="taskdetailcell" customModule="todolist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R5E-M3-yRy" id="vSg-bL-nQr">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="100" verticalCompressionResistancePriority="1000" misplaced="YES" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="etc-GZ-mpQ">
+                        <rect key="frame" x="40" y="5" width="271" height="20"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDF-BC-IJK">
+                        <rect key="frame" x="5" y="-3" width="28" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="41" id="Dwu-sf-tQH"/>
+                            <constraint firstAttribute="width" constant="28" id="yxD-fj-t9G"/>
+                        </constraints>
+                        <state key="normal" image="checkbox_inactive_btn">
+                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="TDF-BC-IJK" firstAttribute="leading" secondItem="vSg-bL-nQr" secondAttribute="leadingMargin" constant="-3" id="0W6-FC-M0Q"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="etc-GZ-mpQ" secondAttribute="trailing" constant="-4" id="6XF-uy-4E8"/>
+                    <constraint firstItem="etc-GZ-mpQ" firstAttribute="top" secondItem="vSg-bL-nQr" secondAttribute="topMargin" constant="-9" id="DII-98-Ae0"/>
+                    <constraint firstItem="etc-GZ-mpQ" firstAttribute="leading" secondItem="TDF-BC-IJK" secondAttribute="trailing" constant="7" id="Plq-Wn-kyG"/>
+                    <constraint firstItem="TDF-BC-IJK" firstAttribute="top" secondItem="vSg-bL-nQr" secondAttribute="topMargin" constant="-11" id="QpA-Tv-BFy"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="etc-GZ-mpQ" secondAttribute="bottom" constant="-4" id="vhf-97-0CR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnCheckBox" destination="TDF-BC-IJK" id="Uch-Rc-aum"/>
+                <outlet property="txtViewTask" destination="etc-GZ-mpQ" id="WLI-Hd-cUh"/>
+            </connections>
+            <point key="canvasLocation" x="759.5" y="145"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkbox_inactive_btn" width="28" height="41"/>
+    </resources>
+</document>
